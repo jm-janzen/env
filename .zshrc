@@ -59,13 +59,12 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 export KEYTIMEOUT=1
 
-PS1="%{$fg[white]%}%n%{$reset_color%}@%{$fg[white]%}%m %{$fg[white]%}%~
-%{$reset_color%}%% %{$fg_bold[magenta]%}>%{$reset_color%} "
+PS1="%{$fg[magenta]%}%/ %{$fg_bold[magenta]%}>%{$reset_color%} "
 
 ### convenience
-alias    ls='ls -l -p --color'
+alias    ls='ls -l -p'
 alias    ll='ls -a'
-alias     l='\ls -p --color'
+alias     l='\ls -p'
 alias     j='jobs -l'
 alias     h='history'
 alias     t='tree -C'
