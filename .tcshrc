@@ -1,0 +1,116 @@
+# so much better
+bindkey -v
+
+# command to refresh aliases without starting new shell:  source ~/.tcshrc
+unset autologout
+
+setenv CVS_RSH ssh
+setenv LC_COLLATE C
+
+alias m    'make -s -j 8 V=0'
+#alias make 'make -s'
+alias gdb  'gdb -q'
+alias d    'dirs -v'
+alias sd   'pushd'
+alias pd   'popd'
+
+bindkey -b ^N  history-search-forward
+bindkey -b ^P  history-search-backward
+bindkey -b ^W  backward-delete-word
+bindkey -b ^f  forward-word
+bindkey -b ^b  backward-word
+bindkey    ' ' magic-space
+
+set autolist=ambiguous
+set pushdsilent
+set prompt="`hostname -s` %B%.3%b%# %L"
+
+#{foo,bar}.somewhere.net)
+set hosts = ( \
+    {jm,sparq}.192.168.1.\*\*\*)
+
+set _skipdir='^{CVS,RCS,.svn}/'
+
+
+complete cd             'p/1/d:'$_skipdir       # directories only
+complete chdir          'p/1/d:'$_skipdir
+complete pushd          'p/1/d:'$_skipdir
+complete ssh            'n/*/$hosts/'
+
+####################
+### my additions ###
+####################
+
+bindkey "^R" i-search-back                  #mimics functionality of ^r from bourne shell
+alias ls      'ls -p --color=auto'          #or maybe this already covered by l
+alias ll      'ls -phAlF --color=auto'      #-a = all, -A = Almost all (ignore ./, ../)
+alias l       'ls -pF --color=auto'
+alias l.      'ls -lad .*'                  #print only hidden files
+alias abs     'find `pwd` -name'            #print absolute path of file after -name
+alias ff      'find ~ -iname'               #-name = case sensitive; -iname = case Insensitive
+alias search  'grep -rn . -e'               #
+alias f       '~/.myscripts/superfind.sh'   #Usage: finds <dir> <filename>
+alias fr      '~/.myscripts/repofind.sh'    #Usage: finds <dir> <reponame>
+alias r       '~/.myscripts/superrm.sh'     #Usage: rm <dir> (with tree output + prompt)
+alias s       '~/.myscripts/supergrep.sh'   #Usage: s <dir> <pattern>
+alias MKdir   'mkdir -pv'                   #-p = make parents without complaint, -v print message when creating
+alias zap     'rm -rfi'                     #-i = ask before descending and again for each rm
+alias j       'jobs -l'                     #
+alias h       'history'                     #
+alias vis     'vim "+set si"'               #open vim with automatic indenting
+alias vir     'vim -R'                      #open file in vim, read-only mode
+alias ports   'sudo netstat -uplant'        #list all TCP/UDP ports on the server
+alias df      'df -H'                       #report file system disk space usage
+alias du      'du -ch --summarize'          #print estimated disk usage
+alias rm      'rm -I'                       # "
+alias mv      'mv -i'                       # prompts for safety
+alias cp      'cp -i'                       # "
+alias ln      'ln -i'                       # "
+alias poke    'touch -c'                    #touch, but don't create if not exists
+alias aliases 'cat ~/.tcshrc | grep alias | grep "#.\+" --colour=auto' #show these aliases, all fancy-like
+alias alert   "printf '\a'"
+alias asdf    "echo don\'t give up, $user"
+
+###################
+### git aliases ###
+###################
+alias g       'git'                     #
+alias st      'git status -s -b'        #shortform git status + branch info
+alias gs      'git status'              #
+alias gd      'git diff'                #
+alias gdd     "git diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'" #show character substitutions on the same line (and avert wordsalad)
+alias gds     'git diff --shortstat'   # just the stats, ma'am
+alias gsl     'git stash list --date=local' #
+alias gt      'git log --graph --oneline --decorate --all' #
+alias g?      'git remote -v update'    #fetch updates from all branches no set to skipDefaultUpdate (show ahead or behind)
+alias gf      'git log -p --follow --oneline --' #
+alias gfp     'git log -p --follow --'  #
+alias gg      'git grep'                #
+
+alias gp        'git pull'              #
+alias gpu       'git push'              #
+alias ga        'git add'               #
+alias gc        'git checkout'          # shortcuts
+alias gcm       'git commit'            #
+alias gl        'git log'               #
+alias glp       'git log -p'            #
+alias gb        'git blame -c'          ### TODO add more parms for better readout
+alias alig      'alias | grep git'      #
+
+### below from http://www.cs.umd.edu/~srhuang/teaching/code_snippets/prompt_color.tcsh.html with some edits
+
+# Colors!
+set     red="%{\033[1;31m%}"
+set   green="%{\033[0;32m%}"
+set  yellow="%{\033[1;33m%}"
+set    blue="%{\033[1;34m%}"
+set magenta="%{\033[1;35m%}"
+set    cyan="%{\033[0;36m%}"
+set   white="%{\033[0;37m%}"
+set    bold="%{\033[1;37m%}"
+set   blink="%{\033[5;32m%}"
+set     end="%{\033[0m%}" # This is needed at the end... :(
+
+set prompt = "%B${green}%N${white}@${green}VM: ${white}%~ ${bold}${blink}%#%#%#%b "
+
+unset red green yellow blue magenta cyan yellow white end
