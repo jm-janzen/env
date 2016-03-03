@@ -63,7 +63,8 @@ zle -N zle-keymap-select
 export KEYTIMEOUT=1
 
 setopt transient_rprompt
-PS1="%{$fg[magenta]%}%/ %{$fg_bold[magenta]%}>%{$reset_color%} "
+PS1="%(1j.[%j]"$'\n'".)%{$fg[magenta]%}%/ %{$fg_bold[magenta]%}>%{$reset_color%} "
+#PS1="[$(jobs -p $$ | wc -l)]%{$fg[magenta]%}%/ %{$fg_bold[magenta]%}>%{$reset_color%} "
 RPROMPT="${VIM_INST}"
 
 ### convenience
