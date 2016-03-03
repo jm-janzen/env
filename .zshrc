@@ -46,19 +46,25 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
+VIM_NORM="%{$fg[white]%} -- NORMAL -- %{$reset_color%}"
+VIM_INST="%{$bg[red]%} -- INSERT -- %{$reset_color%}"
+
 function zle-line-init zle-keymap-select {
-    VIM_NORM="%{$fg[white]%} -- NORMAL -- %{$reset_color%}"
-    VIM_INST="%{$bg[red]%} -- INSERT -- %{$reset_color%}"
     RPS1="${${KEYMAP/vicmd/$VIM_NORM}/(main|viins)/$VIM_INST}"
     RPS2=$RPS1
     zle reset-prompt
 }
 
+function zle-line-finish {
+}
+zle -N zle-line-finish
 zle -N zle-line-init
 zle -N zle-keymap-select
 export KEYTIMEOUT=1
 
+setopt transient_rprompt
 PS1="%{$fg[magenta]%}%/ %{$fg_bold[magenta]%}>%{$reset_color%} "
+RPROMPT="${VIM_INST}"
 
 ### convenience
 alias    ls='ls -l -p'
