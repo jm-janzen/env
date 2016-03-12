@@ -71,6 +71,7 @@ RPROMPT="${VIM_INST}"
 alias    ls='ls -l -p'
 alias    ll='ls -a'
 alias     l='\ls -p'
+alias    l.='ls -pa | grep "\." | grep -v "\.\/"'    # show only hidden files
 alias     j='jobs -l'
 alias     h='history'
 alias     t='tree -C'
