@@ -101,7 +101,8 @@ alias  st='git status -s -b'        #shortform git status + branch info
 alias  gs='git status'              #
 alias  gd='git diff'                #
 alias gdd="git diff --color-words='[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+'" #show character substitutions on the same line (and avert wordsalad)
-alias gds='git diff --shortstat'   # just the stats, ma'am
+alias gds='git diff --shortstat'    # just the stats, ma'am
+alias gdc='git diff --cached'       # what did I just add ...?
 alias gsl='git stash list --date=local' #
 alias  gt='git log --graph --oneline --decorate --all' #
 alias  "g?"='git remote -v update'    #fetch updates from all branches no set to skipDefaultUpdate (show ahead or behind)
