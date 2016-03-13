@@ -93,6 +93,7 @@ alias f='~/.myscripts/superfind.sh'   # Usage: f  <dir> <filename>
 alias fr='~/.myscripts/repofind.sh'   # Usage: f  <dir> <reponame>
 alias r='~/.myscripts/superrm.sh'     # Usage: rm <dir> (with tree output + prompt)
 alias s='~/.myscripts/supergrep.sh'   # Usage: s  <dir> <pattern>
+alias d='~/.myscripts/difffiles.sh'   # Usage: d  <dir1> <dir2>
 
 ###################
 ### git aliases ###
@@ -112,6 +113,8 @@ alias gfp='git log -p --follow --'  #
 alias  gg='git grep'                #
 
 alias  gp='git pull'              #
+alias gpr='git pull \
+    --recurse-submodules'         # update submodules
 alias gpu='git push'              #
 alias  ga='git add'               #
 alias  gc='git checkout'          # shortcuts
