@@ -83,7 +83,7 @@ alias    mv='mv -i'                       # prompts for safety
 alias    rm='rm -I'                       # "
 alias    cp='cp -i'                       # "
 alias    ln='ln -i'                       # "
-alias     c="curl ipinfo.io/$2/json"      # useful api for getting info on IPs
+alias     c="curl ipinfo.io/$(echo -ne ${1})/json" # useful api for getting info on IPs
 
 function grade() {
     print "scale=2; $1 / $2 * 100" | bc
