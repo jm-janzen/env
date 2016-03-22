@@ -1,4 +1,9 @@
+set t_Co=256 " more colours
 colorscheme maroloccio
+set background=dark
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+
 filetype plugin on
 filetype indent on
 set number
@@ -73,5 +78,5 @@ syntax on
 filetype on
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.at set filetype=autotest
-autocmd Filetype autotest setlocal noexpandtab list
-autocmd BufNewFile,BufRead *.at, *.am, set set noic cin noexpandtab list
+" autocmd Filetype autotest setlocal noexpandtab list
+" autocmd BufNewFile,BufRead *.at, *.am, set set noic cin noexpandtab list
