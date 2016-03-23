@@ -1,3 +1,4 @@
+export TERM=xterm-256color # setenv TERM 256color
 autoload -Uz promptinit
 promptinit
 #prompt adam1
@@ -76,6 +77,15 @@ alias     j='jobs -l'
 alias     h='history'
 alias     t='tree -C'
 
+### convenice pipes
+alias -g  G='| grep --color'
+alias -g grev='| grep --color -v'
+
+### convenience functions
+function dump() {
+    mv -i $1 $HOME/bups/$1
+}
+
 alias ports='sudo netstat -uplant'        # list all TCP/UDP ports on the server
 alias    df='df -H'                       # report file system disk space usage
 alias    du='du -ch --summarize'          # print estimated disk usage
@@ -83,7 +93,6 @@ alias    mv='mv -i'                       # prompts for safety
 alias    rm='rm -I'                       # "
 alias    cp='cp -i'                       # "
 alias    ln='ln -i'                       # "
-alias     c="curl ipinfo.io/$(echo -ne ${1})/json" # useful api for getting info on IPs
 
 function grade() {
     print "scale=2; $1 / $2 * 100" | bc
@@ -95,6 +104,7 @@ alias fr='~/.myscripts/repofind.sh'   # Usage: f  <dir> <reponame>
 alias r='~/.myscripts/superrm.sh'     # Usage: rm <dir> (with tree output + prompt)
 alias s='~/.myscripts/supergrep.sh'   # Usage: s  <dir> <pattern>
 alias d='~/.myscripts/difffiles.sh'   # Usage: d  <dir1> <dir2>
+alias c='~/.myscripts/ipinfo.sh'      # Usage: c  <ip>
 
 ###################
 ### git aliases ###
