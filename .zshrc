@@ -77,7 +77,10 @@ alias     j='jobs -l'
 alias     h='history'
 alias     t='tree -C'
 
-### convenice pipes
+### convenience (more specific)
+alias   mem='ps axo %mem,cmd,pid,euser | grep -v root | sort -Vr | head -n 25'
+
+### convenience pipes (global)
 alias -g  G='| grep --color'
 alias -g grev='| grep --color -v'
 
