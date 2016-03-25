@@ -78,7 +78,7 @@ alias     h='history'
 alias     t='tree -C'
 
 ### convenience (more specific)
-alias   mem='ps axo %mem,cmd,pid,euser | grep -v root | sort -Vr | head -n 25'
+alias   mem='ps -ax -o %mem=--MEM--,user=---USER---,pid=---PID--,cmd | grep -v root | sort -Vr'
 
 ### convenience pipes (global)
 alias -g  G='| grep --color'
