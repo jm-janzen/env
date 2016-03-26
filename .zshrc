@@ -88,6 +88,12 @@ alias -g grev='| grep --color -v'
 function dump() {
     mv -i $1 $HOME/bups/$1
 }
+function dump-empty() {
+    mv -i $HOME/bups/.[!.]* $HOME/.bups/
+}
+function dump-ls() {
+    ls -la $HOME/bups/
+}
 
 alias ports='sudo netstat -uplant'        # list all TCP/UDP ports on the server
 alias    df='df -H'                       # report file system disk space usage
