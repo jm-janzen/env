@@ -76,6 +76,7 @@ alias    l.='ls -pa | grep "\." | grep -v "\.\/"'    # show only hidden files
 alias     j='jobs -l'
 alias     h='history'
 alias     t='tree -C'
+alias   scn='screen'
 
 ### convenience (more specific)
 alias   mem='ps -ax -o %mem=--MEM--,user=---USER---,pid=---PID--,cmd | grep -v root | sort -Vr'
