@@ -131,7 +131,7 @@ alias  gt='git log --graph --oneline --decorate --all' #
 alias  "g?"='git remote -v update'    #fetch updates from all branches no set to skipDefaultUpdate (show ahead or behind)
 alias  gf='git log -p --follow --oneline --' #
 alias gfp='git log -p --follow --'  #
-alias  gg='git grep'                #
+function gg() { git grep "$*"; }  # simpler git-grep (concatenates params)
 
 alias  gp='git pull'              #
 alias gpr='git pull \
