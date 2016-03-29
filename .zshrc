@@ -143,4 +143,5 @@ alias gcm='git commit'            #
 alias  gl='git log'               #
 alias glp='git log -p'            #
 alias  gb='git blame -c'          ### TODO add more parms for better readout
+alias gcf='git commit -F- <<EOF'  # use heredocs for commit message
 
