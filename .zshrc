@@ -95,6 +95,9 @@ function dump-empty() {
 function dump-ls() {
     ls -la $HOME/bups/
 }
+function notes() {
+    grep -r $HOME/notes/ -e $1 | grep --color -C 10 $2
+}
 
 alias ports='sudo netstat -uplant'        # list all TCP/UDP ports on the server
 alias    df='df -H'                       # report file system disk space usage
