@@ -69,8 +69,8 @@ PS1="%(1j.[%j]"$'\n'".)%{$fg[magenta]%}%/ %{$fg_bold[magenta]%}>%{$reset_color%}
 RPROMPT="${VIM_INST}"
 
 ### convenience
-alias    ls='ls -l -p'
-alias    ll='ls -a'
+alias    ls='\ls -l -ph'
+alias    ll='\ls -halp'
 alias     l='\ls -p'
 alias    l.='ls -pa | grep "\." | grep -v "\.\/"'    # show only hidden files
 alias     j='jobs -l'
