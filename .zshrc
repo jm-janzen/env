@@ -47,7 +47,7 @@ bindkey '^h' backward-delete-char
 bindkey '^w' backward-kill-word
 bindkey '^r' history-incremental-search-backward
 
-VIM_NORM="%{$fg[white]%} -- NORMAL -- %{$reset_color%}"
+VIM_NORM="%{$fg[blue]%} -- NORMAL -- %{$reset_color%}"
 VIM_INST="%{$bg[red]%} -- INSERT -- %{$reset_color%}"
 
 function zle-line-init zle-keymap-select {
