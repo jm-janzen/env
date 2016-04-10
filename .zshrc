@@ -121,6 +121,7 @@ alias r='~/.myscripts/superrm.sh'     # Usage: rm <dir> (with tree output + prom
 alias s='~/.myscripts/supergrep.sh'   # Usage: s  <dir> <pattern>
 alias d='~/.myscripts/difffiles.sh'   # Usage: d  <dir1> <dir2>
 alias c='~/.myscripts/ipinfo.sh'      # Usage: c  <ip>
+alias e='~/.myscripts/penv.sh'        # Usage: e
 
 ###################
 ### git aliases ###
