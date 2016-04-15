@@ -115,14 +115,14 @@ function grade() {
 }
 
 ### scripts 
-alias  f='~/.myscripts/superfind.sh'   # Usage: f  <dir> <filename>
-alias fr='~/.myscripts/repofind.sh'    # Usage: f  <dir> <reponame>
-alias  r='~/.myscripts/superrm.sh'     # Usage: rm <dir> (with tree output + prompt)
-alias  s='~/.myscripts/supergrep.sh'   # Usage: s  <dir> <pattern>
-alias  d='~/.myscripts/difffiles.sh'   # Usage: d  <dir1> <dir2>
-alias  c='~/.myscripts/ipinfo.sh'      # Usage: c  <ip>
-alias  e='~/.myscripts/penv.sh'        # Usage: e
-alias ss='~/.myscripts/gd-sum.sh'      # Usage: ss
+alias  f='~/scripts/superfind.sh'   # Usage: f  <dir> <filename>
+alias fr='~/scripts/repofind.sh'    # Usage: f  <dir> <reponame>
+alias  r='~/scripts/superrm.sh'     # Usage: rm <dir> (with tree output + prompt)
+alias  s='~/scripts/supergrep.sh'   # Usage: s  <dir> <pattern>
+alias  d='~/scripts/difffiles.sh'   # Usage: d  <dir1> <dir2>
+alias  c='~/scripts/ipinfo.sh'      # Usage: c  <ip>
+alias  e='~/scripts/penv.sh'        # Usage: e
+alias ss='~/scripts/gd-sum.sh'      # Usage: ss
 
 ###################
 ### git aliases ###
