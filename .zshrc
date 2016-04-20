@@ -76,7 +76,15 @@ alias    l.='\ls -halpd .*'
 alias     j='jobs -l'
 alias     h='history'
 alias     t='tree -C'
-alias   scn='screen'
+
+function scn() {
+    if (( $# > 0 )) {
+        screen $@
+    } else {
+        d=$(date +'%T')
+        screen -S $d
+    }
+}
 
 ### convenience (more specific)
 alias   mem='ps -ax -o %mem=--MEM--,user=---USER---,pid=---PID--,cmd | grep -v root | sort -Vr'
