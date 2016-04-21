@@ -121,7 +121,7 @@ function dump-ls() {
     ls -la $HOME/bups/
 }
 function notes() {
-    grep -r $HOME/notes/ -e $1 | grep --color -C 10 $2
+    grep -r $HOME/notes/ --exclude-dir=".git" -e $1 | grep --color -C 10 $2
 }
 function calc() {
     echo "$@" | bc
