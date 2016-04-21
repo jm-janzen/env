@@ -8,7 +8,7 @@ idle 60 lockscreen          # lock screen after 1min
 ### hardstatus String ###
 # good resource for further customization: 
 #   http://www.kilobitspersecond.com/2014/02/10/understanding-gnu-screens-hardstatus-strings/
-hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g}][%= %{= kw}%-w%{+bu kG} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
+hardstatus string '%{= kG}[%{G}%H%? %1`%?%{g} - "%S"][%= %{= kw}%-w%{+bu kG} %n*%t%?(%u)%? %{-}%+w %=%{g}][%{B}%m/%d %{W}%C%A%{g}]'
 hardstatus alwayslastline   # force display of custom statusbar (otherwise won't show up)
 
 # gets rid of xoff warnings (annoying)
