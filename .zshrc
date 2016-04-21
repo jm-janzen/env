@@ -77,12 +77,29 @@ alias     j='jobs -l'
 alias     h='history'
 alias     t='tree -C'
 
+# TODO check if screen session of <fruit> name already exists
+# before creating a same-named session.
 function scn() {
+
+    fruits=(banana
+        mango
+        orange
+        peach
+        cherry)
+
+    numFruits=${#fruits}
+
     if (( $# > 0 )) {
         screen $@
     } else {
-        d=$(date +'%T')
-        screen -S $d
+        name=$fruits[$[RANDOM % numFruits + 1]]
+
+        # 1)    Create detached session,
+        # 2)    Stuff an friendly message into it,
+        # 3)    Finally, attach to this session.
+        screen -d -m -S "$name"
+        screen -r "$name" -p 0 -X stuff "echo ${name}-flavoured screen session!"
+        screen -r $name
     }
 }
 
