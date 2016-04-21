@@ -76,6 +76,7 @@ alias    l.='\ls -halpd .*'
 alias     j='jobs -l'
 alias     h='history'
 alias     t='tree -C'
+alias  scns='scn -ls'
 
 # TODO check if screen session of <fruit> name already exists
 # before creating a same-named session.
