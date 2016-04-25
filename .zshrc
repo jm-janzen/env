@@ -178,5 +178,5 @@ alias  gl='git log --name-status' # show file action summaries
 alias glp='git log -p'            #
 alias  gb='git blame -c'          ### TODO add more parms for better readout
 alias gcf='git commit -F- <<EOF'  # use heredocs for commit message
-alias gad='git add --patch'       # commit individual hunks
+alias gap='git add --patch'       # commit individual hunks
 
