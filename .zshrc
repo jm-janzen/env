@@ -110,6 +110,7 @@ alias   mem='ps -ax -o %mem=--MEM--,user=---USER---,pid=---PID--,cmd | grep -v r
 ### convenience pipes (global)
 alias -g  G='| grep --color'
 alias -g grev='| grep --color -v'
+alias -g L='| less -R'
 
 ### convenience functions
 function dump() {
