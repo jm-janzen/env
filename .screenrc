@@ -2,8 +2,7 @@ startup_message off         # self explanatory
 vbell off                   # no flashing screen !!!
 defscrollback 10000         # scroll up buffer
 termcapinfo xterm* ti@:te@  # allow scroll up buffer w/ Shift+PageUp
-idle 60 lockscreen          # lock screen after 1min
-
+idle 480 lockscreen         # lock screen after 1min
 
 ### hardstatus String ###
 # good resource for further customization: 
