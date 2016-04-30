@@ -124,11 +124,12 @@ function calc() {
     echo "$@" | bc
 }
 
+### info aliases
 alias ports='sudo netstat -uplant'        # list all TCP/UDP ports on the server
-
-### safety aliases
 alias    df='df -H'                       # report file system disk space usage
 alias    du='du -ch --summarize'          # print estimated disk usage
+
+### safety aliases
 alias    mv='mv -i'                       # prompts for safety
 alias    rm='rm -I'                       # "
 alias    cp='cp -i'                       # "
