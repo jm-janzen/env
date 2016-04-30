@@ -82,18 +82,10 @@ alias  scns='scn -ls'
 # before creating a same-named session.
 function scn() {
 
-    fruits=(banana
-        mango
-        orange
-        peach
-        cherry
-        pineapple
-        watermelon
-        rasberry
-        strawberry
-        grape
-        grapefruit
-        pomegranate)
+    fruits=(banana mango orange
+        peach cherry pineapple
+        watermelon rasberry strawberry
+        grape grapefruit pomegranate)
 
     numFruits=${#fruits}
 
