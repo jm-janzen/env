@@ -112,7 +112,7 @@ function dump() {
     mv -i $1 $HOME/bups/$1
 }
 function dump-empty() {
-    mv -i $HOME/bups/.[!.]* $HOME/.bups/
+    mv $HOME/bups/* $HOME/.bups/
 }
 function dump-ls() {
     ls -la $HOME/bups/
