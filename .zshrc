@@ -95,12 +95,7 @@ function scn() {
     } else {
         name=$fruits[$[RANDOM % numFruits + 1]]
 
-        # 1)    Create detached session,
-        # 2)    Stuff an friendly message into it,
-        # 3)    Finally, attach to this session.
-        screen -d -m -S "$name"
-        screen -r "$name" -p 0 -X stuff "echo ${name}-flavoured screen session!"
-        screen -r $name
+        screen -m -S "$name"
     }
 }
 
