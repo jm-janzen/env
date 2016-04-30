@@ -86,7 +86,14 @@ function scn() {
         mango
         orange
         peach
-        cherry)
+        cherry
+        pineapple
+        watermelon
+        rasberry
+        strawberry
+        grape
+        grapefruit
+        pomegranate)
 
     numFruits=${#fruits}
 
