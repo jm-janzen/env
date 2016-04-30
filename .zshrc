@@ -95,7 +95,7 @@ function scn() {
     } else {
         name=$fruits[$[RANDOM % numFruits + 1]]
 
-        screen -m -S "$name"
+        screen -S "$name"
     }
 }
 
