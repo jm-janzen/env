@@ -147,7 +147,8 @@ alias  s='~/scripts/supergrep.sh'   # Usage: s  <dir> <pattern>
 alias  d='~/scripts/difffiles.sh'   # Usage: d  <dir1> <dir2>
 alias  c='~/scripts/ipinfo.sh'      # Usage: c  <ip>
 alias  e='~/scripts/penv.sh'        # Usage: e
-alias ss='~/scripts/gd-sum.sh'      # Usage: ss
+alias gm='~/scripts/gd-sum.sh'      # Usage: gm
+alias al='~/scripts/aliases.sh'     # Usage: al
 
 ###################
 ### git aliases ###
