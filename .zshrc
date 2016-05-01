@@ -69,8 +69,8 @@ PS1="%(1j.[%j]"$'\n'".)%{$fg[magenta]%}%/ %{$fg_bold[magenta]%}>%{$reset_color%}
 RPROMPT="${VIM_INST}"
 
 ### convenience
-alias    ls='\ls -l -ph'
-alias    ll='\ls -halp'
+alias    ls='\ls -l -phF'
+alias    ll='\ls -halp -F'
 alias     l='\ls -p'
 alias    l.='\ls -halpd .*'
 alias     j='jobs -l'
