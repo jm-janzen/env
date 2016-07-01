@@ -7,4 +7,4 @@ Mostly a collection of runcom files to make migrating to new environments a litt
 `git submodule init`
 `git submodule update`
 
-Then copy .zshrc, .zshrc.dir to ${HOME} directory.
+Then copy .zshrc, .zshrc.dir to ${HOME} directory and enter `source ~/.zshrc`.
