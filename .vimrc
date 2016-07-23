@@ -73,6 +73,10 @@ let sh_fold_enabled=1         " sh
 let vimsyn_folding='af'       " Vim script
 let xml_syntax_folding=1      " XML
 
+" source macros
+" TODO check file ext, and load appropriate macros
+source ${HOME}/.vimrc.dir/macros.vim
+
 " set explicit tab character for .at files:
 syntax on
 filetype on
