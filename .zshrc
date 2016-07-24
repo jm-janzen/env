@@ -1,3 +1,7 @@
+###
+### standalone zsh runcom
+###
+
 export TERM=xterm-256color # setenv TERM 256color
 autoload -Uz promptinit
 promptinit
