@@ -88,6 +88,10 @@ autocmd FileType c[pp]* call Cpp_conf()
     function Cpp_conf()
         source ${HOME}/.vimrc.dir/macros_cpp.vim
     endfunction
+autocmd FileType *.sh call Bash_conf()
+    function Bash_conf()
+        source ${HOME}/.vimrc.dir/macros_bash.vim
+    endfunction
 
 " set explicit tab character for .at files:
 syntax on
