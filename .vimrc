@@ -98,5 +98,9 @@ syntax on
 filetype on
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.at set filetype=autotest
-" autocmd Filetype autotest setlocal noexpandtab list
-" autocmd BufNewFile,BufRead *.at, *.am, set set noic cin noexpandtab list
+autocmd Filetype autotest setlocal noexpandtab list
+autocmd BufNewFile,BufRead *.at, *.am, set set noic cin noexpandtab list
+
+" set syntax for golang source files
+au BufNewFile,BufRead *.go set syn=go
+
