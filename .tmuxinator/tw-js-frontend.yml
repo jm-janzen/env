@@ -1,0 +1,24 @@
+# ~/.tmuxinator/tw-js-frontend.yml
+
+name: tw-js-frontend
+root: ~/tw/tw-js-frontend
+
+windows:
+    - git: git status -s -b
+    - gulp:
+        layout: main-vertical
+        panes:
+            - sudo gulp
+            - htop -d 0.3
+    - code:
+        root: ~/tw/tw-js-frontend/code/client
+        panes:
+            - vi
+    - style:
+        root: ~/tw/tw-js-frontend/less
+        panes:
+            - tree -d
+    - notes:
+        root: ~/notes
+        panes:
+            - notes --list
